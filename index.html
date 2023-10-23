@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url("Screenshot (106).png");
+  }
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  .form-group {
+    margin-bottom: 10px;
+  }
+  .form-group label {
+    display: block;
+    font-weight: bold;
+  }
+  .form-group input, .form-group select, .form-group date {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  .form-group input[type="file"] {
+    padding: 0;
+  }
+  .form-group input[type="checkbox"] {
+    display: inline-block;
+    margin-right: 5px;
+  }
+  .form-group input[type="submit"] {
+    background-color: #0d3aa4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100px;
+    margin-left: 120px;
+  }
+  .form-group input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Registration Form</h1>
+    <form action="submit.html" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required placeholder="Enter your first name">
+      </div>
+      <div class="form-group">
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required placeholder="Enter your last name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required placeholder="Enter a password">
+      </div>
+      <div class="form-group">
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" id="confirm_password" name="confirm_password" required placeholder="Confirm your password">
+      </div>
+      <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="profile_picture">Profile Picture:</label>
+        <input type="file" id="profile_picture" name="profile_picture" accept="image/*" required>
+      </div>
+      <div class="form-group">
+        <table>
+          <tr>
+            <td>  <input type="checkbox" id="agree" name="agree" required></td>
+            <td>  <label for="agree">I agree to the terms above</label></td>
+          </tr>
+        </table>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
